@@ -1936,7 +1936,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #abd945;
+  background: #95123d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2491,7 +2491,6 @@ pre .javascript .function {
   }
 }
 .header-inner {
-  opacity: 0.9;
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -2560,7 +2559,6 @@ pre .javascript .function {
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
-  opacity: 0.9;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -2584,7 +2582,6 @@ pre .javascript .function {
   width: 240px;
   background: #f5f7f9;
   box-shadow: none;
-  opacity: 0.9;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar {
@@ -2889,7 +2886,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/background.png");
+  background: url("/images/background.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
