@@ -100,30 +100,31 @@
 
 
   
-  <meta name="keywords" content="Deep learning, ACM-ICPC, Data Structures, Codeforces, python, java, 日常, Algorithms, Dota2, Math, Maximum flow, DP, Graph, String, Segment Tree, Search, High Precision, Computing Geometry" />
+  <meta name="keywords" content="codeforces," />
 
 
-<meta name="description" content="To be filled">
-<meta name="keywords" content="Deep learning, ACM-ICPC, Data Structures, Codeforces, python, java, 日常, Algorithms, Dota2, Math, Maximum flow, DP, Graph, String, Segment Tree, Search, High Precision, Computing Geometry">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fonzeu&#39;s Blog">
-<meta property="og:url" content="http://wfz0755.github.io/index.html">
+<meta name="description" content="Link to problem题目大意：给你一颗n个nodes的树，每个node有对应的weight， 求SUM(每两个不同nodes之间的path上最大的weight与最小的weight的差).解析：刚看到这道题的时候想诶这个不是裸的树链剖分么,（孩子你还是太天真了），写完果断T了QAQ，后来看解答，觉得这道题可以说是思路很巧妙了。   蠢蠢的分界线  答案的组成可以看成是SUM(max) -">
+<meta name="keywords" content="codeforces">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CF915F Imbalance Value of a Tree">
+<meta property="og:url" content="http://wfz0755.github.io/2018/01/24/CF915F-Imbalance-Value-of-a-Tree/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
-<meta property="og:description" content="To be filled">
+<meta property="og:description" content="Link to problem题目大意：给你一颗n个nodes的树，每个node有对应的weight， 求SUM(每两个不同nodes之间的path上最大的weight与最小的weight的差).解析：刚看到这道题的时候想诶这个不是裸的树链剖分么,（孩子你还是太天真了），写完果断T了QAQ，后来看解答，觉得这道题可以说是思路很巧妙了。   蠢蠢的分界线  答案的组成可以看成是SUM(max) -">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-01-24T13:21:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fonzeu&#39;s Blog">
-<meta name="twitter:description" content="To be filled">
+<meta name="twitter:title" content="CF915F Imbalance Value of a Tree">
+<meta name="twitter:description" content="Link to problem题目大意：给你一颗n个nodes的树，每个node有对应的weight， 求SUM(每两个不同nodes之间的path上最大的weight与最小的weight的差).解析：刚看到这道题的时候想诶这个不是裸的树链剖分么,（孩子你还是太天真了），写完果断T了QAQ，后来看解答，觉得这道题可以说是思路很巧妙了。   蠢蠢的分界线  答案的组成可以看成是SUM(max) -">
 
 
 
 
 
 
-  <link rel="canonical" href="http://wfz0755.github.io/"/>
+  <link rel="canonical" href="http://wfz0755.github.io/2018/01/24/CF915F-Imbalance-Value-of-a-Tree/"/>
 
 
-  <title>Fonzeu's Blog</title>
+  <title>CF915F Imbalance Value of a Tree | Fonzeu's Blog</title>
   
 
 
@@ -170,8 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -254,9 +254,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -288,9 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/24/CF915F-Imbalance-Value-of-a-Tree/" itemprop="url">CF915F Imbalance Value of a Tree</a></h1>
+          <h1 class="post-title" itemprop="name headline">CF915F Imbalance Value of a Tree</h1>
         
 
         <div class="post-meta">
@@ -350,16 +348,12 @@
       
 
       
-        
-          
-            <p><a href="http://codeforces.com/contest/915/problem/F" target="_blank" rel="noopener">Link to problem</a><br>题目大意：给你一颗n个nodes的树，每个node有对应的weight， 求SUM(每两个不同nodes之间的path上最大的weight与最小的weight的差).<br>解析：刚看到这道题的时候想诶这个不是裸的树链剖分么,（孩子你还是太天真了），写完果断T了QAQ，后来看解答，觉得这道题可以说是思路很巧妙了。  </p>
+        <p><a href="http://codeforces.com/contest/915/problem/F" target="_blank" rel="noopener">Link to problem</a><br>题目大意：给你一颗n个nodes的树，每个node有对应的weight， 求SUM(每两个不同nodes之间的path上最大的weight与最小的weight的差).<br>解析：刚看到这道题的时候想诶这个不是裸的树链剖分么,（孩子你还是太天真了），写完果断T了QAQ，后来看解答，觉得这道题可以说是思路很巧妙了。  </p>
 <p>蠢蠢的分界线</p>
 <hr>
 <p><em>答案的组成可以看成是SUM(max) - SUM(min).<br>先来看求SUM(max), 首先把每个节点按照weight从小到大sort一遍，假设每个点一开始都是一个只包含自己的集合。 从最小的点开始(u)，遍历它所有的出边(u,v)，val(u) 就是当前所有经过u的path上的最大weight. 在计算有多少条经过u的path的时候有一个tricky的地方，就是维护一个当前u周围的点的数目sz，每当处理到一条新的已访问过的边(u,v’)的时候, 直接拿sz乘上 v’所在集合的大小就是新加入的path的数目。 最后不要忘了以u为端点的path，还有long long. 嗯，以上.</em></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MIN(a,b)  ((a)&lt;(b)?(a):(b))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX(a,b)  ((a)&gt;(b)?(a):(b))</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vi;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; ii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ii&gt; vii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;vii&gt; vvii;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;vi&gt; vvi;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1000005</span>;</span><br><span class="line"><span class="keyword">int</span> p[maxn];</span><br><span class="line"><span class="function">vvi <span class="title">g</span><span class="params">(maxn)</span></span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">  ll val;</span><br><span class="line">  <span class="keyword">int</span> ind;</span><br><span class="line">&#125;nodes[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node &amp;n1,node &amp;n2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(n1.val == n2.val)</span><br><span class="line">    <span class="keyword">return</span> n1.ind &lt; n2.ind; <span class="comment">// don't return true ... 含泪微笑</span></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> n1.val &lt; n2.val;</span><br><span class="line">&#125;</span><br><span class="line">ll ans;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_rt</span><span class="params">(<span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(p[u] &lt; <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> u;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> p[u] = find_rt(p[u]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> rt1 = find_rt(u);</span><br><span class="line">  <span class="keyword">int</span> rt2 = find_rt(v);</span><br><span class="line">  <span class="keyword">if</span>(rt1 &lt;= rt2)</span><br><span class="line">  &#123;</span><br><span class="line">      p[rt1] += p[rt2];</span><br><span class="line">      p[rt2] = rt1;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">     p[rt2] += p[rt1];</span><br><span class="line">      p[rt1] = rt2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(p,<span class="number">-1</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="literal">false</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="keyword">int</span> u,v;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">  &#123;</span><br><span class="line">    u = nodes[i].ind;</span><br><span class="line">    val = nodes[i].val;</span><br><span class="line">    vis[u]= <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">int</span> nodes_around_u =<span class="number">0</span>; <span class="comment">// including u</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j&lt; g[u].size();j++) <span class="comment">// examine every out extending edge of node i</span></span><br><span class="line">    &#123; <span class="comment">// here we have a trick to speed up</span></span><br><span class="line">      v = g[u][j];</span><br><span class="line">      <span class="keyword">if</span>(vis[v])</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">int</span> v_size = -p[find_rt(v)];</span><br><span class="line">        ans +=  <span class="number">1l</span>l*v_size*nodes_around_u*val;</span><br><span class="line">        nodes_around_u += v_size;</span><br><span class="line">        Union(u,v);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    ans += <span class="number">1l</span>l*nodes_around_u*val;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  ans = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;nodes[i].val);</span><br><span class="line">    nodes[i].ind  = i;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(nodes+<span class="number">1</span>,nodes+<span class="number">1</span>+n,cmp);</span><br><span class="line">  <span class="keyword">int</span> u,v;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</span><br><span class="line">    g[u].pb(v);</span><br><span class="line">    g[v].pb(u);  </span><br><span class="line">  &#125;</span><br><span class="line">  solve();</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">  &#123;</span><br><span class="line">    nodes[i].val  = -nodes[i].val;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(nodes+<span class="number">1</span>,nodes+<span class="number">1</span>+n,cmp);</span><br><span class="line">  solve();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -369,283 +363,65 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给你吃糖:P</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Fonzeu WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wfz0755.github.io/2018/01/22/beginning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fonzeu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/068E.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fonzeu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/22/beginning/" itemprop="url">At the beginning of 2018</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-22T16:07:43+08:00">2018-01-22</time>
-            
-
-            
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/codeforces/" rel="tag"># codeforces</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/22/beginning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/22/beginning/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>以前看人家的解题报告的时候就会想: ummm莫名有些炫酷呢🙄我也想有一个。 但是出于种种原因，一直没能抽出时间来做。<br>于是在新的一年里终于不再拖延，照着大佬们的tutorial弄了一个只属于自己的blog。可以说是非常兴奋了(噗)。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wfz0755.github.io/2018/01/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fonzeu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/068E.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fonzeu's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/22/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-22T15:57:48+08:00">2018-01-22</time>
+              <a href="/2018/01/22/beginning/" rel="next" title="At the beginning of 2018">
+                <i class="fa fa-chevron-left"></i> At the beginning of 2018
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/22/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/22/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Great Thanks to those who contribute to hexo and NexT.<br>Even Ju2 Ruo4 like me can have a personal blog haha :P</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -655,14 +431,29 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -901,6 +692,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.2"></script>
+
+
 
   
 
@@ -915,6 +710,23 @@
     <script id="dsq-count-scr" src="https://fonzeu.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://wfz0755.github.io/2018/01/24/CF915F-Imbalance-Value-of-a-Tree/';
+        this.page.identifier = '2018/01/24/CF915F-Imbalance-Value-of-a-Tree/';
+        this.page.title = 'CF915F Imbalance Value of a Tree';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fonzeu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 
