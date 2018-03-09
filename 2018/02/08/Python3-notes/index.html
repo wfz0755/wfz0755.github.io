@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)虽然都叫python，但是两者还是有挺大区别的，边学边记记。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-06T12:17:37.000Z">
+<meta property="og:updated_time" content="2018-03-06T13:16:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3 notes">
 <meta name="twitter:description" content="感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)虽然都叫python，但是两者还是有挺大区别的，边学边记记。">
@@ -357,8 +357,11 @@
 </li>
 <li><p>PYTHONHOME:<br>It is an alternative module search path. It is usually embedded in the PYTHONSTARTUP or PYTHONPATH directories to make switching module libraries easy.</p>
 </li>
-<li>PYTHONCASEOK:<br>It is used in Windows to instruct Python to find the first case-insensitive match in an import statement. Set this variable to any value to activate it.</li>
+<li>PYTHONCASEOK:<br>It is used in Windows to instruct Python to find the first case-insensitive match in an import statement. Set this variable to any value to activate it.   </li>
 </ul>
+<h3 id="string-formatter"><a href="#string-formatter" class="headerlink" title="string formatter"></a>string formatter</h3><p>之前可能习惯了C的printf(), python里也有一个类似的但是更有用的function str.format().<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#print value, those values are included in a tuple + dictionary  </span><br><span class="line">print(&quot;Sammy the &#123;pr&#125; &#123;1&#125; a &#123;0&#125;.&quot;.format(&quot;shark&quot;, &quot;made&quot;, pr = &quot;pull request&quot;))</span><br><span class="line"></span><br><span class="line">#set precision</span><br><span class="line">print(&quot;Sammy ate &#123;0:.1f&#125; percent of a pizza!&quot;.format(75.765367))</span><br><span class="line"></span><br><span class="line">#padding</span><br><span class="line">print(&quot;Sammy has &#123;0:4&#125; red &#123;1:16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#left-align and centering (&lt;,^,&gt;)</span><br><span class="line">print(&quot;Sammy has &#123;0:&lt;4&#125; red &#123;1:^16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#padding with * , 20 character size, &apos;s&apos; -&gt; string conversion type</span><br><span class="line">print(&quot;&#123;:*^20s&#125;&quot;.format(&quot;Sammy&quot;))</span><br><span class="line"></span><br><span class="line">#format can be used in this way</span><br><span class="line">nBalloons = 8</span><br><span class="line">print(&quot;Sammy has &#123;&#125; balloons today!&quot;.format(nBalloons))</span><br></pre></td></tr></table></figure></p>
+<p>output:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Sammy the pull request made <span class="keyword">a</span> shark.    </span><br><span class="line">Sammy ate <span class="number">75.8</span> percent of <span class="keyword">a</span> pizza!  </span><br><span class="line">Sammy <span class="built_in">has</span>    <span class="number">5</span> <span class="keyword">red</span> balloons        !</span><br><span class="line">Sammy <span class="built_in">has</span> <span class="number">5</span>    <span class="keyword">red</span>     balloons    !</span><br><span class="line">*******Sammy********</span><br><span class="line">Sammy <span class="built_in">has</span> <span class="number">8</span> balloons today!</span><br></pre></td></tr></table></figure></p>
+<p>Ref:<br><a href="https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3" target="_blank" rel="noopener">String formatter</a></p>
 
       
     </div>
@@ -513,7 +516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -590,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Environment-Variables"><span class="nav-number">1.</span> <span class="nav-text">Python Environment Variables</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Environment-Variables"><span class="nav-number">1.</span> <span class="nav-text">Python Environment Variables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string-formatter"><span class="nav-number">2.</span> <span class="nav-text">string formatter</span></a></li></ol></div>
             
 
           </div>
