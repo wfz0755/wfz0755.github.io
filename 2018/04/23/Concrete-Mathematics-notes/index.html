@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.This post will mainly function a">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T13:30:00.000Z">
+<meta property="og:updated_time" content="2018-04-23T16:29:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Concrete Mathematics notes">
 <meta name="twitter:description" content="Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.This post will mainly function a">
@@ -349,9 +349,10 @@
 
       
         <p>Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.<br>This post will mainly function as a memo in case I suddenly don’t understand some tricky part :P<br><a id="more"></a>  </p>
-<h1 id="Chapter1-Recurrent-Problems"><a href="#Chapter1-Recurrent-Problems" class="headerlink" title="Chapter1. Recurrent Problems"></a>Chapter1. Recurrent Problems</h1><h3 id="Lines-in-the-plane"><a href="#Lines-in-the-plane" class="headerlink" title="Lines in the plane"></a>Lines in the plane</h3><p>I think this part is really interesting. The origin of this kind of problem is simple:<br><strong>How many slices of pizza can a person obtain by making n straight cuts with a pizza knife?<em> =&gt; </em>What is the maximum number $ L_{n} $ of regions defined by n lines in the plane?</strong><br>Some variants of this problem can replace straight lines with bent lines or zig-zag lines. The key to this kind of problem is to find the maximum number of new intersections that can be generated between the new line $ l_{n} $ and previous (n-1) lines. New regions are generated along with new intersections.<br>The closed form of $L_{n}$ is always got by listing out the recurrence. For the straight line case, $$ L_{0} = 1;L_{n} = L_{n-1}+(n-1)+1 $$<br>Here (n-1) is the number of new intersections. By observation, (n-1)+1 = n is the number of new regions.<br>The same rule applies to other scenario where lines are not necessary straight.  </p>
-<h3 id="Space-division"><a href="#Space-division" class="headerlink" title="Space division"></a>Space division</h3><p>What is the maximum number of three dimensional regions that can be defined by n different planes?<br>Sol: The number of new 3-dimensional regions defined by each new cut is the number of 2-dimensional regions defined in the new plane by its intersections with the previous planes.<br>$$ P_{n} = P_{n-1} + L_{n-1} $$<br>Actually<br>$ X_{n} = C_n^{0} + C_{n}^{1}; $<br>$ L_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}; $<br>$ P_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}+C_{n}^{3}; $<br>Really nice pattern.  </p>
-<h3 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued"></a>To be continued</h3><p><em>Reference: Graham, Knuth and Patashnik: Concrete Mathematics </em></p>
+<h1 id="Chapter1-Recurrent-Problems"><a href="#Chapter1-Recurrent-Problems" class="headerlink" title="Chapter1. Recurrent Problems"></a>Chapter1. Recurrent Problems</h1><h3 id="Lines-in-the-plane"><a href="#Lines-in-the-plane" class="headerlink" title="Lines in the plane"></a>Lines in the plane</h3><p>I think this part is really interesting. The origin of this kind of problem is simple:<br><strong>How many slices of pizza can a person obtain by making n straight cuts with a pizza knife?<em> =&gt; </em>What is the maximum number $ L_{n} $ of regions defined by n lines in the plane?</strong><br>Some variants of this problem can replace straight lines with bent lines or zig-zag lines. The key to this kind of problem is to find the maximum number of new intersections that can be generated between the new line $ l_{n} $ and previous (n-1) lines. New regions are generated along with new intersections.<br>The closed form of $L_{n}$ is always got by listing out the recurrence. For the straight line case,<br>$$ L_{0} = 1;L_{n} = L_{n-1}+(n-1)+1 $$<br>Here (n-1) is the number of new intersections. By observation, (n-1)+1 = n is the number of new regions.<br>The same rule applies to other scenario where lines are not necessary straight.  </p>
+<h3 id="Space-division"><a href="#Space-division" class="headerlink" title="Space division"></a>Space division</h3><p>What is the maximum number of three dimensional regions that can be defined by n different planes?<br>Sol: The number of new 3D regions defined by each new cut is the number of 2D regions defined in the new plane by its intersections with the previous planes.<br>$$P_{n} = P_{n-1} + L_{n-1} $$<br>Actually<br>$ X_{n} = C_n^{0} + C_{n}^{1}; $<br>$ L_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}; $<br>$ P_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}+C_{n}^{3}; $<br>Really nice pattern.(Sounds Trumpy though…)</p>
+<h3 id="The-Josephus-Problem"><a href="#The-Josephus-Problem" class="headerlink" title="The Josephus Problem"></a>The Josephus Problem</h3><p>Background: N people are standing as a circle and numbered from 1 to n. Every time the third remaining person will be killed until there is less than d=2 people.<br>The problem: Determine the survivor’s number, J(n).<br>$J(2^{m}+l) = 2l + 1, for m \geq 0 and 0\leq l &lt; 2^{m}$<br>Generalization:<br>$f(j) = \alpha_{j}, for 1 \leq j &lt; d;$<br>$f(dn+j) = cf(n)+\beta_{j}, for 0 \leq j &lt; d and n \geq 1;$<br>We start with numbers in radix d and produce values in radix c. That is, it has the radix-changing solution<br>$f((b_{m} b_{m-1} \ldots b_{1}b_{0})_{d}) = (\alpha_{b_{m}}\beta_{b_{m-1}}\beta_{b_{m-2}} \ldots \beta_{b_{1}}\beta_{b_{0}})_{c} $<br>For example, if we observe that<br>$f(1) = 34$<br>$f(2) = 5$<br>$f(3n) = 10f(n)+76$<br>$f(3n+1) = 10f(n)-2$<br>$f(3n+2) = 10f(n)+8$<br>Here we have  d = 3 and c = 10.<br>This radix-chanding solution tells us to perform a digit-by-digit replacement from radix d to radix c.<br>For example $f(19) = f((2,0,1)_{3}) = (5,76,-2)_{10} = 1258$.</p>
+<h4 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued"></a>To be continued</h4><p><em>Reference: Graham, Knuth and Patashnik: Concrete Mathematics </em></p>
 
       
     </div>
@@ -415,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/24/Lucas-s-Theorem/" rel="prev" title="Lucas's Theorem">
+                Lucas's Theorem <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +507,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -579,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter1-Recurrent-Problems"><span class="nav-number">1.</span> <span class="nav-text">Chapter1. Recurrent Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lines-in-the-plane"><span class="nav-number">1.0.1.</span> <span class="nav-text">Lines in the plane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Space-division"><span class="nav-number">1.0.2.</span> <span class="nav-text">Space division</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#To-be-continued"><span class="nav-number">1.0.3.</span> <span class="nav-text">To be continued</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter1-Recurrent-Problems"><span class="nav-number">1.</span> <span class="nav-text">Chapter1. Recurrent Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lines-in-the-plane"><span class="nav-number">1.0.1.</span> <span class="nav-text">Lines in the plane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Space-division"><span class="nav-number">1.0.2.</span> <span class="nav-text">Space division</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Josephus-Problem"><span class="nav-number">1.0.3.</span> <span class="nav-text">The Josephus Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#To-be-continued"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">To be continued</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
