@@ -100,33 +100,31 @@
 
 
   
-  <meta name="keywords" content="Diary," />
+  <meta name="keywords" content="dynamic programming," />
 
 
-<meta name="description" content="以前看人家的解题报告的时候就会想: ummm莫名有些炫酷呢🙄我也想有一个。 但是出于种种原因，一直没能抽出时间来做。于是在新的一年里终于不再拖延，照着大佬们的tutorial弄了一个只属于自己的blog。可以说是非常兴奋了(噗)。大家新年快乐呀:)">
-<meta name="keywords" content="Diary">
+<meta name="description" content="Link to the problem I think this is a good dynamic programming problem for exercise🤔.">
+<meta name="keywords" content="dynamic programming">
 <meta property="og:type" content="article">
-<meta property="og:title" content="At the beginning of 2018">
-<meta property="og:url" content="http://wfz0755.github.io/2018/01/22/beginning/index.html">
+<meta property="og:title" content="[CodeJam] Ant Stack">
+<meta property="og:url" content="http://wfz0755.github.io/2018/05/15/CodeJam-Ant-Stack/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
-<meta property="og:description" content="以前看人家的解题报告的时候就会想: ummm莫名有些炫酷呢🙄我也想有一个。 但是出于种种原因，一直没能抽出时间来做。于是在新的一年里终于不再拖延，照着大佬们的tutorial弄了一个只属于自己的blog。可以说是非常兴奋了(噗)。大家新年快乐呀:)">
+<meta property="og:description" content="Link to the problem I think this is a good dynamic programming problem for exercise🤔.">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://wfz0755.github.io/images/jpnewyear.jpg">
-<meta property="og:updated_time" content="2018-03-12T16:12:34.000Z">
+<meta property="og:updated_time" content="2018-05-15T09:59:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="At the beginning of 2018">
-<meta name="twitter:description" content="以前看人家的解题报告的时候就会想: ummm莫名有些炫酷呢🙄我也想有一个。 但是出于种种原因，一直没能抽出时间来做。于是在新的一年里终于不再拖延，照着大佬们的tutorial弄了一个只属于自己的blog。可以说是非常兴奋了(噗)。大家新年快乐呀:)">
-<meta name="twitter:image" content="http://wfz0755.github.io/images/jpnewyear.jpg">
+<meta name="twitter:title" content="[CodeJam] Ant Stack">
+<meta name="twitter:description" content="Link to the problem I think this is a good dynamic programming problem for exercise🤔.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://wfz0755.github.io/2018/01/22/beginning/"/>
+  <link rel="canonical" href="http://wfz0755.github.io/2018/05/15/CodeJam-Ant-Stack/"/>
 
 
-  <title>At the beginning of 2018 | Fonzeu's Blog</title>
+  <title>[CodeJam] Ant Stack | Fonzeu's Blog</title>
   
 
 
@@ -273,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wfz0755.github.io/2018/01/22/beginning/">
+    <link itemprop="mainEntityOfPage" href="http://wfz0755.github.io/2018/05/15/CodeJam-Ant-Stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fonzeu">
@@ -290,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">At the beginning of 2018</h1>
+          <h1 class="post-title" itemprop="name headline">[CodeJam] Ant Stack</h1>
         
 
         <div class="post-meta">
@@ -302,7 +300,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-22T16:07:43+08:00">2018-01-22</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T17:50:03+08:00">2018-05-15</time>
             
 
             
@@ -320,9 +318,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/22/beginning/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/15/CodeJam-Ant-Stack/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/22/beginning/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/15/CodeJam-Ant-Stack/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -350,7 +348,9 @@
       
 
       
-        <p>以前看人家的解题报告的时候就会想: ummm莫名有些炫酷呢🙄我也想有一个。 但是出于种种原因，一直没能抽出时间来做。<br>于是在新的一年里终于不再拖延，照着大佬们的tutorial弄了一个只属于自己的blog。可以说是非常兴奋了(噗)。<br>大家新年快乐呀:)<br><img src="/images/jpnewyear.jpg" alt="new year in japan"></p>
+        <p><a href="https://codejam.withgoogle.com/2018/challenges/0000000000007765/dashboard/000000000003e0a8" target="_blank" rel="noopener">Link to the problem</a></p>
+<p>I think this is a good dynamic programming problem for exercise🤔.  <a id="more"></a><br>One tricky point is that we can find the maximum number of ants that we can achieve when weight $ \leq 10^{9} $ is around 138, which is much smaller than $10^{5}$.<br>dp[i][j] means the minimum weight when we use ants from 1 to i to get a pile containing j ants. And the transition function is like<br>dp[i][j] = min( dp[i-1][j], dp[i-1][j-1] + weights[i] (if 6*weights[i] $\geq$ dp[i-1][j-1]))</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#include &lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll  long long</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxant = <span class="number">150</span>;</span><br><span class="line">ll weights[maxn];</span><br><span class="line">ll dp[maxn][maxant+<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> T;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">int</span> N;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> t = <span class="number">1</span>; t &lt;= T;t++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Case #%d: "</span>,t);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ;i &lt;= N;i++)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= maxant;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				dp[i][j] = <span class="number">0x3f3f3f3f3f3f3f3f</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;weights[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;= N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			dp[i][<span class="number">0</span>] =<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= N;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>;j &lt;= maxant;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(dp[i][j] &gt; dp[i<span class="number">-1</span>][j])</span><br><span class="line">					&#123;</span><br><span class="line">						dp[i][j] = dp[i<span class="number">-1</span>][j];</span><br><span class="line">					&#125;</span><br><span class="line">				<span class="keyword">if</span>(<span class="number">6</span>*weights[i] &gt;= dp[i<span class="number">-1</span>][j<span class="number">-1</span>])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(dp[i][j] &gt; dp[i<span class="number">-1</span>][j<span class="number">-1</span>] + weights[i])</span><br><span class="line">					dp[i][j] = dp[i<span class="number">-1</span>][j<span class="number">-1</span>] + weights[i];</span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = maxant;i &gt;= <span class="number">1</span>;i--)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(dp[N][i] != <span class="number">0x3f3f3f3f3f3f3f3f</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,i);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -392,7 +392,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Diary/" rel="tag"># Diary</a>
+            <a href="/tags/dynamic-programming/" rel="tag"># dynamic programming</a>
           
         </div>
       
@@ -405,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/22/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/26/Binary-Search-review/" rel="next" title="Binary Search review">
+                <i class="fa fa-chevron-left"></i> Binary Search review
               </a>
             
           </div>
@@ -414,10 +414,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/24/CF915F-Imbalance-Value-of-a-Tree/" rel="prev" title="CF915F Imbalance Value of a Tree">
-                CF915F Imbalance Value of a Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -715,9 +711,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://wfz0755.github.io/2018/01/22/beginning/';
-        this.page.identifier = '2018/01/22/beginning/';
-        this.page.title = 'At the beginning of 2018';
+        this.page.url = 'http://wfz0755.github.io/2018/05/15/CodeJam-Ant-Stack/';
+        this.page.identifier = '2018/05/15/CodeJam-Ant-Stack/';
+        this.page.title = '[CodeJam] Ant Stack';
       };
       function loadComments () {
         var d = document, s = d.createElement('script');

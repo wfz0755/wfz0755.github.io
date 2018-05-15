@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="Simple as binary search looks like, the devil is in the detail.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-26T09:32:29.000Z">
+<meta property="og:updated_time" content="2018-04-26T15:39:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Binary Search review">
 <meta name="twitter:description" content="Simple as binary search looks like, the devil is in the detail.">
@@ -360,6 +360,7 @@
 <li>Verify that the lower and upper bounds are not overly constrained: it’s usually better to relax them as long as it doesn’t break the predicate</li>
 <li>Use <strong>lo + (hi-lo)/2</strong> instead of <strong>(lo + hi)/2</strong> in case (1)the number can be negative and (2) there may be overflow.</li>
 </ul>
+<p>By the way, there exists a function std::nth_element in c++ <algorithm> library, which can be used to find the n-th largest(or smallest element) in the unsorted array. Ref: <a href="http://en.cppreference.com/w/cpp/algorithm/nth_element" target="_blank" rel="noopener">link</a></algorithm></p>
 
       
     </div>
@@ -423,6 +424,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/15/CodeJam-Ant-Stack/" rel="prev" title="[CodeJam] Ant Stack">
+                [CodeJam] Ant Stack <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -501,7 +506,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -514,7 +519,7 @@
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
