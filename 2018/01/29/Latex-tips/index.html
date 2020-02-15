@@ -104,21 +104,20 @@
 
 
 <meta name="description" content="最近在赶research proposal的due, 正好熟悉熟悉latex, 今天就正好整理一波小tips,免得以后忘记。Latex这个东西是什么呢？LaTeX is a high-quality typesetting system. (抄一波official doc)。简而言之其实就是一个高质量的排版语言起初老板让我学着写paper，就接触了它。讲道理虽然开始啥都看不懂，但是其实很好入门。现">
-<meta name="keywords" content="Latex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Latex tips(不定期更新)">
 <meta property="og:url" content="http://wfz0755.github.io/2018/01/29/Latex-tips/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="最近在赶research proposal的due, 正好熟悉熟悉latex, 今天就正好整理一波小tips,免得以后忘记。Latex这个东西是什么呢？LaTeX is a high-quality typesetting system. (抄一波official doc)。简而言之其实就是一个高质量的排版语言起初老板让我学着写paper，就接触了它。讲道理虽然开始啥都看不懂，但是其实很好入门。现">
-<meta property="og:locale" content="default">
 <meta property="og:image" content="http://wfz0755.github.io/images/latex_bib.png">
 <meta property="og:image" content="http://wfz0755.github.io/images/latex_bib1.png">
 <meta property="og:image" content="http://wfz0755.github.io/images/latex_bib2.png">
 <meta property="og:image" content="http://wfz0755.github.io/images/mtc_miao.jpeg">
-<meta property="og:updated_time" content="2018-03-12T16:12:28.000Z">
+<meta property="article:published_time" content="2018-01-29T06:26:57.000Z">
+<meta property="article:modified_time" content="2018-03-12T16:12:28.000Z">
+<meta property="article:author" content="Fonzeu">
+<meta property="article:tag" content="Latex">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Latex tips(不定期更新)">
-<meta name="twitter:description" content="最近在赶research proposal的due, 正好熟悉熟悉latex, 今天就正好整理一波小tips,免得以后忘记。Latex这个东西是什么呢？LaTeX is a high-quality typesetting system. (抄一波official doc)。简而言之其实就是一个高质量的排版语言起初老板让我学着写paper，就接触了它。讲道理虽然开始啥都看不懂，但是其实很好入门。现">
 <meta name="twitter:image" content="http://wfz0755.github.io/images/latex_bib.png">
 
 
@@ -165,9 +164,9 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
@@ -213,25 +212,25 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
         
         <li class="menu-item menu-item-academic-page">
-          <a href="/CV/" rel="section">
+          <a href="/CV/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Academic Page</a>
         </li>
       
@@ -353,33 +352,37 @@
       
 
       
-        <p>最近在赶research proposal的due, 正好熟悉熟悉latex, 今天就正好整理一波小tips,免得以后忘记。<br>Latex这个东西是什么呢？LaTeX is a high-quality typesetting system. (抄一波official doc)。简而言之其实就是一个高质量的排版语言<br>起初老板让我学着写paper，就接触了它。讲道理虽然开始啥都看不懂，但是其实很好入门。现在就个人习惯来说，能用latex写的东西，我不会用word写，<del>这样逼格比较高</del>(其实是因为不太会用word的技巧:P), citation还方便(记性差的人的福音)。<br><a id="more"></a></p>
+        <p>最近在赶research proposal的due, 正好熟悉熟悉latex, 今天就正好整理一波小tips,免得以后忘记。<br>Latex这个东西是什么呢？LaTeX is a high-quality typesetting system. (抄一波official doc)。简而言之其实就是一个高质量的排版语言<br>起初老板让我学着写paper，就接触了它。讲道理虽然开始啥都看不懂，但是其实很好入门。现在就个人习惯来说，能用latex写的东西，我不会用word写，<del>这样逼格比较高</del>(其实是因为不太会用word的技巧:P), citation还方便(记性差的人的福音)。</p>
+<a id="more"></a>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a><em>Tips</em></h2><ul>
 <li><p>如何在latex doc里面做citation？ 假如我想在文章里引用某些paper</p>
 <ul>
-<li>在google scholar上找到那篇paper</li>
-<li>点cite（就是那个星星旁边像引号一样的图标)</li>
-<li>点BibTeX</li>
-<li><p>copy出现页面所有的东西</p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  @article&#123;he2013hap,</span><br><span class="line">  <span class="attr">title=&#123;Hap-seq:</span> an optimal algorithm for haplotype phasing <span class="keyword">with</span> imputation using sequencing data&#125;,</span><br><span class="line">  <span class="attr">author=&#123;He,</span> Dan <span class="literal">and</span> Han, Buhm <span class="literal">and</span> Eskin, Eleazar&#125;,</span><br><span class="line">  <span class="attr">journal=&#123;Journal</span> of Computational Biology&#125;,</span><br><span class="line">  <span class="attr">volume=&#123;20&#125;,</span></span><br><span class="line">  <span class="attr">number=&#123;2&#125;,</span></span><br><span class="line">  <span class="attr">pages=&#123;80--92&#125;,</span></span><br><span class="line">  <span class="attr">year=&#123;2013&#125;,</span></span><br><span class="line">  <span class="attr">publisher=&#123;Mary</span> Ann Liebert, Inc. <span class="number">140</span> Huguenot Street, <span class="number">3</span>rd Floor New Rochelle, NY <span class="number">10801</span> USA&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>在google scholar上找到那篇paper</p>
 </li>
+<li><p>点cite（就是那个星星旁边像引号一样的图标)</p>
+</li>
+<li><p>点BibTeX</p>
+</li>
+<li><p>copy出现页面所有的东西</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  @article&#123;he2013hap,</span><br><span class="line">  <span class="attr">title=&#123;Hap-seq:</span> an optimal algorithm for haplotype phasing <span class="keyword">with</span> imputation using sequencing data&#125;,</span><br><span class="line">  <span class="attr">author=&#123;He,</span> Dan <span class="literal">and</span> Han, Buhm <span class="literal">and</span> Eskin, Eleazar&#125;,</span><br><span class="line">  <span class="attr">journal=&#123;Journal</span> of Computational Biology&#125;,</span><br><span class="line">  <span class="attr">volume=&#123;20&#125;,</span></span><br><span class="line">  <span class="attr">number=&#123;2&#125;,</span></span><br><span class="line">  <span class="attr">pages=&#123;80--92&#125;,</span></span><br><span class="line">  <span class="attr">year=&#123;2013&#125;,</span></span><br><span class="line">  <span class="attr">publisher=&#123;Mary</span> Ann Liebert, Inc. <span class="number">140</span> Huguenot Street, <span class="number">3</span>rd Floor New Rochelle, NY <span class="number">10801</span> USA&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>把copy的东西放到latex project目录里面，命名为xxx.bib， 像一个reference库一样。</p>
 </li>
 <li><p>在.tex文件里，假如想要引用这篇paper，我们需要做的就是加上如下代码,这里我用的是APA，当然也可以改成IEEE什么的。需要注意的是这里的xxx要和之前保存reference的文件名一样.</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%at the beginning</span></span><br><span class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">&#123;apacite&#125;</span></span></span><br><span class="line"><span class="comment">%inside document</span></span><br><span class="line">Rua? Rua!(咳咳...正文)<span class="tag">\<span class="name">cite</span><span class="string">&#123;he2013hap&#125;</span></span></span><br><span class="line"><span class="comment">%at last</span></span><br><span class="line"><span class="tag">\<span class="name">bibliographystyle</span><span class="string">&#123;apacite&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">bibliography</span><span class="string">&#123;xxx&#125;</span></span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%at the beginning</span></span><br><span class="line"><span class="tag">\<span class="name">usepackage</span><span class="string">&#123;apacite&#125;</span></span></span><br><span class="line"><span class="comment">%inside document</span></span><br><span class="line">Rua? Rua!(咳咳...正文)<span class="tag">\<span class="name">cite</span><span class="string">&#123;he2013hap&#125;</span></span></span><br><span class="line"><span class="comment">%at last</span></span><br><span class="line"><span class="tag">\<span class="name">bibliographystyle</span><span class="string">&#123;apacite&#125;</span></span></span><br><span class="line"><span class="tag">\<span class="name">bibliography</span><span class="string">&#123;xxx&#125;</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>基本上就ok了，但是想要达到最终效果，你需要特殊的compile技巧（什么鬼），先把类型换成BibTex，typeset一次，再转回latex typeset 多次，就ok了:)<br><img src="/images/latex_bib.png" alt="photo"></p>
 </li>
-<li>最后效果(偷懒就直接把proposal拖出来了:P ) :<br><img src="/images/latex_bib1.png" alt="photo"> <img src="/images/latex_bib2.png" alt="photo"></li>
+<li><p>最后效果(偷懒就直接把proposal拖出来了:P ) :<br><img src="/images/latex_bib1.png" alt="photo"> <img src="/images/latex_bib2.png" alt="photo"></p>
+</li>
 </ul>
 </li>
 <li><p>如何调整title 和下面正文(document)的距离:<br>写完proposal 发现title+author和 正文部分空了一大截，有什么办法来利用这一部分空间呢？<br>答 案 就 是：可以在需要往上缩的地方前面加这个  </p>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\<span class="attr">vspace*&#123;-10</span>mm&#125; <span class="meta">%</span>其他的像pt什么的作为单位也可以</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>margin什么的想要调节的话，可以用geometry package<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage[a4paper,top=<span class="number">0</span><span class="keyword">cm</span>,bottom=<span class="number">1.5</span><span class="keyword">cm</span>,<span class="keyword">left</span>=<span class="number">2</span><span class="keyword">cm</span>,<span class="keyword">right</span>=<span class="number">2</span><span class="keyword">cm</span>,marginparwidth=<span class="number">1.75</span><span class="keyword">cm</span>]&#123;geometry&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>针对性调节字体： 想要有针对性地调节字体的话，可以先自己定义字体，然后在打算使用字体的地方引用一波，如下：<br>title就成了font:cmr12, 大小:15pt<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\font\<span class="attribute">myfont</span>=cmr12 at 15pt</span><br><span class="line">\title&#123; &#123;\myfont<span class="built_in"> Proposal </span>on Haplotype Calling with a Deep Learning Approach&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>margin什么的想要调节的话，可以用geometry package  </p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage[a4paper,top=<span class="number">0</span><span class="keyword">cm</span>,bottom=<span class="number">1.5</span><span class="keyword">cm</span>,<span class="keyword">left</span>=<span class="number">2</span><span class="keyword">cm</span>,<span class="keyword">right</span>=<span class="number">2</span><span class="keyword">cm</span>,marginparwidth=<span class="number">1.75</span><span class="keyword">cm</span>]&#123;geometry&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>针对性调节字体： 想要有针对性地调节字体的话，可以先自己定义字体，然后在打算使用字体的地方引用一波，如下：<br>title就成了font:cmr12, 大小:15pt</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\font\<span class="attribute">myfont</span>=cmr12 at 15pt</span><br><span class="line">\title&#123; &#123;\myfont<span class="built_in"> Proposal </span>on Haplotype Calling with a Deep Learning Approach&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
 </li>
 </ul>
 <p><em>最后</em>, 这玩意儿怎么学呢?🤔 其实不是特别专业的话，可以就在youtube上面把basic的看了，不到两个小时，然后多读读别人的代码(其实网上找的模板，看看规律), 想要写东西的时候，可以找些template，把内容往里面加就好了。 有的时候可能会报编译错误，十有八九是package缺了，多问问<em>咕老师</em>，我觉得你们会喜欢latex的 :)</p>
@@ -457,7 +460,7 @@
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
         </noscript>
       </div>
     </div>
@@ -512,7 +515,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
@@ -790,7 +793,7 @@
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

@@ -104,17 +104,16 @@
 
 
 <meta name="description" content="Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.This post will mainly function a">
-<meta name="keywords" content="Mathematics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Concrete Mathematics notes">
 <meta property="og:url" content="http://wfz0755.github.io/2018/04/23/Concrete-Mathematics-notes/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.This post will mainly function a">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T16:29:58.000Z">
+<meta property="article:published_time" content="2018-04-23T09:46:26.000Z">
+<meta property="article:modified_time" content="2018-04-23T16:29:58.000Z">
+<meta property="article:author" content="Fonzeu">
+<meta property="article:tag" content="Mathematics">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Concrete Mathematics notes">
-<meta name="twitter:description" content="Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.This post will mainly function a">
 
 
 
@@ -160,9 +159,9 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
@@ -208,25 +207,25 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
         
         <li class="menu-item menu-item-academic-page">
-          <a href="/CV/" rel="section">
+          <a href="/CV/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Academic Page</a>
         </li>
       
@@ -348,11 +347,12 @@
       
 
       
-        <p>Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.<br>This post will mainly function as a memo in case I suddenly don’t understand some tricky part :P<br><a id="more"></a>  </p>
-<h1 id="Chapter1-Recurrent-Problems"><a href="#Chapter1-Recurrent-Problems" class="headerlink" title="Chapter1. Recurrent Problems"></a>Chapter1. Recurrent Problems</h1><h3 id="Lines-in-the-plane"><a href="#Lines-in-the-plane" class="headerlink" title="Lines in the plane"></a>Lines in the plane</h3><p>I think this part is really interesting. The origin of this kind of problem is simple:<br><strong>How many slices of pizza can a person obtain by making n straight cuts with a pizza knife?<em> =&gt; </em>What is the maximum number $ L_{n} $ of regions defined by n lines in the plane?</strong><br>Some variants of this problem can replace straight lines with bent lines or zig-zag lines. The key to this kind of problem is to find the maximum number of new intersections that can be generated between the new line $ l_{n} $ and previous (n-1) lines. New regions are generated along with new intersections.<br>The closed form of $L_{n}$ is always got by listing out the recurrence. For the straight line case,<br>$$ L_{0} = 1;L_{n} = L_{n-1}+(n-1)+1 $$<br>Here (n-1) is the number of new intersections. By observation, (n-1)+1 = n is the number of new regions.<br>The same rule applies to other scenario where lines are not necessary straight.  </p>
+        <p>Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.<br>This post will mainly function as a memo in case I suddenly don’t understand some tricky part :P  </p>
+<a id="more"></a>  
+<h1 id="Chapter1-Recurrent-Problems"><a href="#Chapter1-Recurrent-Problems" class="headerlink" title="Chapter1. Recurrent Problems"></a>Chapter1. Recurrent Problems</h1><h3 id="Lines-in-the-plane"><a href="#Lines-in-the-plane" class="headerlink" title="Lines in the plane"></a>Lines in the plane</h3><p>I think this part is really interesting. The origin of this kind of problem is simple:<br><strong>How many slices of pizza can a person obtain by making n straight cuts with a pizza knife?* =&gt; *What is the maximum number $ L_{n} $ of regions defined by n lines in the plane?</strong><br>Some variants of this problem can replace straight lines with bent lines or zig-zag lines. The key to this kind of problem is to find the maximum number of new intersections that can be generated between the new line $ l_{n} $ and previous (n-1) lines. New regions are generated along with new intersections.<br>The closed form of $L_{n}$ is always got by listing out the recurrence. For the straight line case,<br>$$ L_{0} = 1;L_{n} = L_{n-1}+(n-1)+1 $$<br>Here (n-1) is the number of new intersections. By observation, (n-1)+1 = n is the number of new regions.<br>The same rule applies to other scenario where lines are not necessary straight.  </p>
 <h3 id="Space-division"><a href="#Space-division" class="headerlink" title="Space division"></a>Space division</h3><p>What is the maximum number of three dimensional regions that can be defined by n different planes?<br>Sol: The number of new 3D regions defined by each new cut is the number of 2D regions defined in the new plane by its intersections with the previous planes.<br>$$P_{n} = P_{n-1} + L_{n-1} $$<br>Actually<br>$ X_{n} = C_n^{0} + C_{n}^{1}; $<br>$ L_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}; $<br>$ P_{n} = C_n^{0} + C_{n}^{1}+C_{n}^{2}+C_{n}^{3}; $<br>Really nice pattern.(Sounds Trumpy though…)</p>
 <h3 id="The-Josephus-Problem"><a href="#The-Josephus-Problem" class="headerlink" title="The Josephus Problem"></a>The Josephus Problem</h3><p>Background: N people are standing as a circle and numbered from 1 to n. Every time the third remaining person will be killed until there is less than d=2 people.<br>The problem: Determine the survivor’s number, J(n).<br>$J(2^{m}+l) = 2l + 1, for m \geq 0 and 0\leq l &lt; 2^{m}$<br>Generalization:<br>$f(j) = \alpha_{j}, for 1 \leq j &lt; d;$<br>$f(dn+j) = cf(n)+\beta_{j}, for 0 \leq j &lt; d and n \geq 1;$<br>We start with numbers in radix d and produce values in radix c. That is, it has the radix-changing solution<br>$f((b_{m} b_{m-1} \ldots b_{1}b_{0})_{d}) = (\alpha_{b_{m}}\beta_{b_{m-1}}\beta_{b_{m-2}} \ldots \beta_{b_{1}}\beta_{b_{0}})_{c} $<br>For example, if we observe that<br>$f(1) = 34$<br>$f(2) = 5$<br>$f(3n) = 10f(n)+76$<br>$f(3n+1) = 10f(n)-2$<br>$f(3n+2) = 10f(n)+8$<br>Here we have  d = 3 and c = 10.<br>This radix-chanding solution tells us to perform a digit-by-digit replacement from radix d to radix c.<br>For example $f(19) = f((2,0,1)_{3}) = (5,76,-2)_{10} = 1258$.</p>
-<h4 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued"></a>To be continued</h4><p><em>Reference: Graham, Knuth and Patashnik: Concrete Mathematics </em></p>
+<h4 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued"></a>To be continued</h4><p>*Reference: Graham, Knuth and Patashnik: Concrete Mathematics *</p>
 
       
     </div>
@@ -426,7 +426,7 @@
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
         </noscript>
       </div>
     </div>
@@ -481,7 +481,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
@@ -759,7 +759,7 @@
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

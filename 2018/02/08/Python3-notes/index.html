@@ -104,18 +104,17 @@
 
 
 <meta name="description" content="感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)虽然都叫python，但是两者还是有挺大区别的，边学边记记。">
-<meta name="keywords" content="Python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3 notes">
 <meta property="og:url" content="http://wfz0755.github.io/2018/02/08/Python3-notes/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)虽然都叫python，但是两者还是有挺大区别的，边学边记记。">
-<meta property="og:locale" content="default">
 <meta property="og:image" content="http://wfz0755.github.io/images/pickle-rick.jpg">
-<meta property="og:updated_time" content="2018-03-12T16:12:26.000Z">
+<meta property="article:published_time" content="2018-02-08T03:48:51.000Z">
+<meta property="article:modified_time" content="2018-03-12T16:12:26.000Z">
+<meta property="article:author" content="Fonzeu">
+<meta property="article:tag" content="Python3">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python3 notes">
-<meta name="twitter:description" content="感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)虽然都叫python，但是两者还是有挺大区别的，边学边记记。">
 <meta name="twitter:image" content="http://wfz0755.github.io/images/pickle-rick.jpg">
 
 
@@ -162,9 +161,9 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
@@ -210,25 +209,25 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
         
         <li class="menu-item menu-item-academic-page">
-          <a href="/CV/" rel="section">
+          <a href="/CV/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Academic Page</a>
         </li>
       
@@ -352,6 +351,7 @@
       
         <p>感觉是时候向python3 转移一波了呢(虽然弱菜的python2并不是特别熟练🤔)<br>虽然都叫python，但是两者还是有挺大区别的，边学边记记。</p>
 <a id="more"></a>  
+
 <h2 id="Python-Environment-Variables"><a href="#Python-Environment-Variables" class="headerlink" title="Python Environment Variables"></a>Python Environment Variables</h2><p>Those environment variables are recognized by Python.</p>
 <ul>
 <li><p>PYTHONPATH:<br>This variable tells the Python interpreter where to locate the module files imported into a program. It should include the Python source library directory and the directories containing Python source code. PYTHONPATH is sometimes preset by the Python installer.</p>
@@ -360,13 +360,19 @@
 </li>
 <li><p>PYTHONHOME:<br>It is an alternative module search path. It is usually embedded in the PYTHONSTARTUP or PYTHONPATH directories to make switching module libraries easy.</p>
 </li>
-<li>PYTHONCASEOK:<br>It is used in Windows to instruct Python to find the first case-insensitive match in an import statement. Set this variable to any value to activate it.   </li>
+<li><p>PYTHONCASEOK:<br>It is used in Windows to instruct Python to find the first case-insensitive match in an import statement. Set this variable to any value to activate it.   </p>
+</li>
 </ul>
-<h2 id="string-formatter"><a href="#string-formatter" class="headerlink" title="string formatter"></a>string formatter</h2><p>之前可能习惯了C的printf(), python里也有一个类似的但是更有用的function str.format().<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#print value, those values are included in a tuple + dictionary  </span><br><span class="line">print(&quot;Sammy the &#123;pr&#125; &#123;1&#125; a &#123;0&#125;.&quot;.format(&quot;shark&quot;, &quot;made&quot;, pr = &quot;pull request&quot;))</span><br><span class="line"></span><br><span class="line">#set precision</span><br><span class="line">print(&quot;Sammy ate &#123;0:.1f&#125; percent of a pizza!&quot;.format(75.765367))</span><br><span class="line"></span><br><span class="line">#padding</span><br><span class="line">print(&quot;Sammy has &#123;0:4&#125; red &#123;1:16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#left-align and centering (&lt;,^,&gt;)</span><br><span class="line">print(&quot;Sammy has &#123;0:&lt;4&#125; red &#123;1:^16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#padding with * , 20 character size, &apos;s&apos; -&gt; string conversion type</span><br><span class="line">print(&quot;&#123;:*^20s&#125;&quot;.format(&quot;Sammy&quot;))</span><br><span class="line"></span><br><span class="line">#format can be used in this way</span><br><span class="line">nBalloons = 8</span><br><span class="line">print(&quot;Sammy has &#123;&#125; balloons today!&quot;.format(nBalloons))</span><br></pre></td></tr></table></figure></p>
-<p>output:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Sammy the pull request made <span class="keyword">a</span> shark.    </span><br><span class="line">Sammy ate <span class="number">75.8</span> percent of <span class="keyword">a</span> pizza!  </span><br><span class="line">Sammy <span class="built_in">has</span>    <span class="number">5</span> <span class="keyword">red</span> balloons        !</span><br><span class="line">Sammy <span class="built_in">has</span> <span class="number">5</span>    <span class="keyword">red</span>     balloons    !</span><br><span class="line">*******Sammy********</span><br><span class="line">Sammy <span class="built_in">has</span> <span class="number">8</span> balloons today!</span><br></pre></td></tr></table></figure></p>
+<h2 id="string-formatter"><a href="#string-formatter" class="headerlink" title="string formatter"></a>string formatter</h2><p>之前可能习惯了C的printf(), python里也有一个类似的但是更有用的function str.format().  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#print value, those values are included in a tuple + dictionary  </span><br><span class="line">print(&quot;Sammy the &#123;pr&#125; &#123;1&#125; a &#123;0&#125;.&quot;.format(&quot;shark&quot;, &quot;made&quot;, pr &#x3D; &quot;pull request&quot;))</span><br><span class="line"></span><br><span class="line">#set precision</span><br><span class="line">print(&quot;Sammy ate &#123;0:.1f&#125; percent of a pizza!&quot;.format(75.765367))</span><br><span class="line"></span><br><span class="line">#padding</span><br><span class="line">print(&quot;Sammy has &#123;0:4&#125; red &#123;1:16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#left-align and centering (&lt;,^,&gt;)</span><br><span class="line">print(&quot;Sammy has &#123;0:&lt;4&#125; red &#123;1:^16&#125;!&quot;.format(5, &quot;balloons&quot;))</span><br><span class="line"></span><br><span class="line">#padding with * , 20 character size, &#39;s&#39; -&gt; string conversion type</span><br><span class="line">print(&quot;&#123;:*^20s&#125;&quot;.format(&quot;Sammy&quot;))</span><br><span class="line"></span><br><span class="line">#format can be used in this way</span><br><span class="line">nBalloons &#x3D; 8</span><br><span class="line">print(&quot;Sammy has &#123;&#125; balloons today!&quot;.format(nBalloons))</span><br></pre></td></tr></table></figure>
+
+<p>output:  </p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Sammy</span> <span class="string">the pull request made a shark.    </span></span><br><span class="line"><span class="attr">Sammy</span> <span class="string">ate 75.8 percent of a pizza!  </span></span><br><span class="line"><span class="attr">Sammy</span> <span class="string">has    5 red balloons        !</span></span><br><span class="line"><span class="attr">Sammy</span> <span class="string">has 5    red     balloons    !</span></span><br><span class="line"><span class="attr">*******Sammy********</span></span><br><span class="line"><span class="attr">Sammy</span> <span class="string">has 8 balloons today!</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="pickle-suddenly-pickle-rick-came-cross-my-mind"><a href="#pickle-suddenly-pickle-rick-came-cross-my-mind" class="headerlink" title="pickle (suddenly pickle rick came cross my mind)"></a>pickle (suddenly pickle rick came cross my mind)</h2><p><img src="/images/pickle-rick.jpg" alt="Rick"><br>pickle package can be used to easily save/load python objects into/from files.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">dict1 = &#123;&quot;a&quot;:100,</span><br><span class="line">  &quot;b&quot;:200,  </span><br><span class="line">  &quot;c&quot;: 300</span><br><span class="line">&#125;</span><br><span class="line">list1= [400,300,200]</span><br><span class="line">print(dict1)</span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">with open(&quot;save1.pkl&quot;,&quot;wb&quot;) as outfile:   # &apos;wb&apos; -&gt; write binary</span><br><span class="line">    pickle.dump(dict1,outfile,pickle.HIGHEST_PROTOCOL)</span><br><span class="line">    pickle.dump(list1,outfile,pickle.HIGHEST_PROTOCOL)</span><br><span class="line"></span><br><span class="line">with open(&quot;save1.pkl&quot;,&quot;rb&quot;) as infile:</span><br><span class="line">    dict2 = pickle.load(infile)</span><br><span class="line">    list2 = pickle.load(infile)</span><br><span class="line">    print(dict1)</span><br><span class="line">    print(list1)</span><br></pre></td></tr></table></figure>
-<p>output:<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">'a'</span>: <span class="number">100</span>, <span class="string">'b'</span>: <span class="number">200</span>, <span class="string">'c'</span>: <span class="number">300</span>&#125; [<span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>]  </span><br><span class="line">&#123;<span class="string">'a'</span>: <span class="number">100</span>, <span class="string">'b'</span>: <span class="number">200</span>, <span class="string">'c'</span>: <span class="number">300</span>&#125; [<span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">dict1 &#x3D; &#123;&quot;a&quot;:100,</span><br><span class="line">  &quot;b&quot;:200,  </span><br><span class="line">  &quot;c&quot;: 300</span><br><span class="line">&#125;</span><br><span class="line">list1&#x3D; [400,300,200]</span><br><span class="line">print(dict1)</span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">with open(&quot;save1.pkl&quot;,&quot;wb&quot;) as outfile:   # &#39;wb&#39; -&gt; write binary</span><br><span class="line">    pickle.dump(dict1,outfile,pickle.HIGHEST_PROTOCOL)</span><br><span class="line">    pickle.dump(list1,outfile,pickle.HIGHEST_PROTOCOL)</span><br><span class="line"></span><br><span class="line">with open(&quot;save1.pkl&quot;,&quot;rb&quot;) as infile:</span><br><span class="line">    dict2 &#x3D; pickle.load(infile)</span><br><span class="line">    list2 &#x3D; pickle.load(infile)</span><br><span class="line">    print(dict1)</span><br><span class="line">    print(list1)</span><br></pre></td></tr></table></figure>
+<p>output:   </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;'a':</span> <span class="number">100</span><span class="string">,</span> <span class="attr">'b':</span> <span class="number">200</span><span class="string">,</span> <span class="attr">'c':</span> <span class="number">300</span><span class="string">&#125;</span> <span class="string">[400,</span> <span class="number">300</span><span class="string">,</span> <span class="number">200</span><span class="string">]</span>  </span><br><span class="line"><span class="string">&#123;'a':</span> <span class="number">100</span><span class="string">,</span> <span class="attr">'b':</span> <span class="number">200</span><span class="string">,</span> <span class="attr">'c':</span> <span class="number">300</span><span class="string">&#125;</span> <span class="string">[400,</span> <span class="number">300</span><span class="string">,</span> <span class="number">200</span><span class="string">]</span></span><br></pre></td></tr></table></figure>
 <p>plus a pickle file  </p>
 <p>Ref:<br><a href="https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3" target="_blank" rel="noopener">String formatter</a></p>
 
@@ -442,7 +448,7 @@
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
         </noscript>
       </div>
     </div>
@@ -497,7 +503,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
@@ -775,7 +781,7 @@
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->

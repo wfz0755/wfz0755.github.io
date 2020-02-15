@@ -104,16 +104,31 @@
 
 
 <meta name="description" content="To be filled">
-<meta name="keywords" content="Deep learning, ACM-ICPC, Data Structures, Codeforces, python, java, 日常, Algorithms, Dota2, Math, Maximum flow, DP, Graph, String, Segment Tree, Search, High Precision, Computing Geometry">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fonzeu&#39;s Blog">
 <meta property="og:url" content="http://wfz0755.github.io/index.html">
 <meta property="og:site_name" content="Fonzeu&#39;s Blog">
 <meta property="og:description" content="To be filled">
-<meta property="og:locale" content="default">
+<meta property="article:author" content="Fonzeu">
+<meta property="article:tag" content="Deep learning">
+<meta property="article:tag" content=" ACM-ICPC">
+<meta property="article:tag" content=" Data Structures">
+<meta property="article:tag" content=" Codeforces">
+<meta property="article:tag" content=" python">
+<meta property="article:tag" content=" java">
+<meta property="article:tag" content=" 日常">
+<meta property="article:tag" content=" Algorithms">
+<meta property="article:tag" content=" Dota2">
+<meta property="article:tag" content=" Math">
+<meta property="article:tag" content=" Maximum flow">
+<meta property="article:tag" content=" DP">
+<meta property="article:tag" content=" Graph">
+<meta property="article:tag" content=" String">
+<meta property="article:tag" content=" Segment Tree">
+<meta property="article:tag" content=" Search">
+<meta property="article:tag" content=" High Precision">
+<meta property="article:tag" content=" Computing Geometry">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fonzeu&#39;s Blog">
-<meta name="twitter:description" content="To be filled">
 
 
 
@@ -159,9 +174,9 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
@@ -208,25 +223,25 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
         </li>
       
         
         <li class="menu-item menu-item-academic-page">
-          <a href="/CV/" rel="section">
+          <a href="/CV/%20" rel="section">
             <i class="menu-item-icon fa fa-fw fa-user"></i> <br />Academic Page</a>
         </li>
       
@@ -354,12 +369,20 @@
           
             <h4 id="When-you-want-to-execute-a-command-in-another-directory-but-don’t-want-to-use-cd-command-to-go-their-and-come-back-sub-shell-will-do-the-job-for-us"><a href="#When-you-want-to-execute-a-command-in-another-directory-but-don’t-want-to-use-cd-command-to-go-their-and-come-back-sub-shell-will-do-the-job-for-us" class="headerlink" title="When you want to execute a command in another directory but don’t want to use cd command to go their and come back, sub-shell will do the job for us."></a>When you want to execute a command in another directory but don’t want to use cd command to go their and come back, sub-shell will do the job for us.</h4><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">cd</span> ~/mlsys/incubator-mxnet/ <span class="symbol">&amp;&amp;</span> git pull)</span><br></pre></td></tr></table></figure>
 <h4 id="Bash-while-loop"><a href="#Bash-while-loop" class="headerlink" title="Bash while loop"></a>Bash while loop</h4><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="keyword">read</span> <span class="keyword">LINE</span></span><br><span class="line"><span class="keyword">do</span> COMMAND</span><br><span class="line">done &lt; <span class="keyword">FILE</span></span><br></pre></td></tr></table></figure>
-<p>equals<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="keyword">read</span> <span class="keyword">LINE</span>; <span class="keyword">do</span> COMMAND; done &lt; <span class="keyword">FILE</span></span><br></pre></td></tr></table></figure></p>
-<p>in one line.<br>And each time a line from FILE will be read.<br>eg:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> LINE; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">"<span class="variable">$LINE</span>"</span> | cut -f1 -d<span class="string">":"</span>; <span class="keyword">done</span> &lt; /etc/passwd</span><br></pre></td></tr></table></figure></p>
+<p>equals</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="keyword">read</span> <span class="keyword">LINE</span>; <span class="keyword">do</span> COMMAND; done &lt; <span class="keyword">FILE</span></span><br></pre></td></tr></table></figure>
+<p>in one line.<br>And each time a line from FILE will be read.<br>eg:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> LINE; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">"<span class="variable">$LINE</span>"</span> | cut -f1 -d<span class="string">":"</span>; <span class="keyword">done</span> &lt; /etc/passwd</span><br></pre></td></tr></table></figure>
 <p>will print the first column in “passwd” file.</p>
-<h4 id="Here-Documents"><a href="#Here-Documents" class="headerlink" title="Here Documents"></a>Here Documents</h4><p>A <em>here document</em> is a special-purpose code block. It uses a form of I/O redirection to feed a command list to an interactive program or a command, such as ftp, cat, or the ex text editor.<br>eg:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">COMMAND</span> &lt;&lt; InputComesFromHERE</span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">InputComesFromHERE</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="Kill-processes"><a href="#Kill-processes" class="headerlink" title="Kill processes"></a>Kill processes</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">kill</span> [signal <span class="keyword">or</span> <span class="keyword">option</span>] PID(s) # seperated <span class="keyword">by</span> spaces should be fine</span><br><span class="line">ps -A  # <span class="keyword">show</span> all processes</span><br><span class="line"></span><br><span class="line">pidof mysqld # given that you know the CMD <span class="keyword">of</span> processes, <span class="keyword">use</span> pidof <span class="keyword">to</span> <span class="keyword">get</span> the pid</span><br><span class="line"></span><br><span class="line">ps aux   # <span class="keyword">show</span> more detail, aux <span class="keyword">is</span> the combination <span class="keyword">of</span> options, <span class="keyword">including</span> <span class="string">"a,u,x"</span></span><br><span class="line"></span><br><span class="line">pkill Processname # <span class="keyword">using</span> process <span class="keyword">name</span> <span class="keyword">to</span> <span class="keyword">kill</span></span><br><span class="line"></span><br><span class="line">killall [signal <span class="keyword">or</span> <span class="keyword">option</span>] Process <span class="keyword">Name</span> # <span class="keyword">kill</span> all the processes <span class="keyword">with</span> the <span class="keyword">name</span> along <span class="keyword">with</span> their <span class="keyword">child</span> processes</span><br><span class="line"></span><br><span class="line">ps -aux | grep mysql # <span class="keyword">check</span> the <span class="keyword">status</span> <span class="keyword">of</span> process</span><br><span class="line">pgrep mysql # will also <span class="keyword">do</span> the job</span><br></pre></td></tr></table></figure>
-<h4 id="Delete-files-recursively-with-given-patterns"><a href="#Delete-files-recursively-with-given-patterns" class="headerlink" title="Delete files recursively with given patterns"></a>Delete files recursively with given patterns</h4><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find</span> . -<span class="built_in">type</span> f -<span class="built_in">name</span> <span class="string">'*.o'</span> -delete</span><br></pre></td></tr></table></figure>
+<h4 id="Here-Documents"><a href="#Here-Documents" class="headerlink" title="Here Documents"></a>Here Documents</h4><p>A <em>here document</em> is a special-purpose code block. It uses a form of I/O redirection to feed a command list to an interactive program or a command, such as ftp, cat, or the ex text editor.<br>eg:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">COMMAND</span> &lt;&lt; InputComesFromHERE</span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">blabla</span></span><br><span class="line"><span class="keyword">InputComesFromHERE</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Kill-processes"><a href="#Kill-processes" class="headerlink" title="Kill processes"></a>Kill processes</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">kill</span> [signal <span class="keyword">or</span> <span class="keyword">option</span>] PID(s) <span class="comment"># seperated by spaces should be fine</span></span><br><span class="line">ps -A  <span class="comment"># show all processes</span></span><br><span class="line"></span><br><span class="line">pidof mysqld <span class="comment"># given that you know the CMD of processes, use pidof to get the pid</span></span><br><span class="line"></span><br><span class="line">ps aux   <span class="comment"># show more detail, aux is the combination of options, including "a,u,x"</span></span><br><span class="line"></span><br><span class="line">pkill Processname <span class="comment"># using process name to kill</span></span><br><span class="line"></span><br><span class="line">killall [signal <span class="keyword">or</span> <span class="keyword">option</span>] Process <span class="keyword">Name</span> <span class="comment"># kill all the processes with the name along with their child processes</span></span><br><span class="line"></span><br><span class="line">ps -aux | grep mysql <span class="comment"># check the status of process</span></span><br><span class="line">pgrep mysql <span class="comment"># will also do the job</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="Delete-files-recursively-with-given-patterns"><a href="#Delete-files-recursively-with-given-patterns" class="headerlink" title="Delete files recursively with given patterns"></a>Delete files recursively with given patterns</h4><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="keyword">type</span> f -<span class="type">name</span> <span class="string">'*.o'</span> -<span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -627,7 +650,7 @@
 
       
         
-          <p>Simple as binary search looks like, the devil is in the detail.<br>
+          <p>Simple as binary search looks like, the devil is in the detail.  </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/26/Binary-Search-review/#more" rel="contents">
@@ -763,7 +786,7 @@
 
       
         
-          <h2 id="Lucas’s-theorem"><a href="#Lucas’s-theorem" class="headerlink" title="Lucas’s theorem"></a>Lucas’s theorem</h2><p><a href="https://brilliant.org/wiki/lucas-theorem/" target="_blank" rel="noopener">Click(chuo1) me(wo3) for more info:</a><br>Just take a look of this theorem:<br>$\binom{m}{n} \equiv \Pi_{i=0}^{k} \binom{m_{i}}{n_{i}}$(mod p),<br>where $m = m_{k}p^{k} + m_{k-1}p^{k-1}+\ldots + m_{1}p + m_{0}$ and $n = n_{k}p^{k} + n_{k-1}p^{k-1}+\ldots + n_{1}p + n_{0}$ are the base p expansions of m and n. This uses the convention that $\binom{m}{n} =0$ when $m &lt; n$.<br>
+          <h2 id="Lucas’s-theorem"><a href="#Lucas’s-theorem" class="headerlink" title="Lucas’s theorem"></a>Lucas’s theorem</h2><p><a href="https://brilliant.org/wiki/lucas-theorem/" target="_blank" rel="noopener">Click(chuo1) me(wo3) for more info:</a><br>Just take a look of this theorem:<br>$\binom{m}{n} \equiv \Pi_{i=0}^{k} \binom{m_{i}}{n_{i}}$(mod p),<br>where $m = m_{k}p^{k} + m_{k-1}p^{k-1}+\ldots + m_{1}p + m_{0}$ and $n = n_{k}p^{k} + n_{k-1}p^{k-1}+\ldots + n_{1}p + n_{0}$ are the base p expansions of m and n. This uses the convention that $\binom{m}{n} =0$ when $m &lt; n$.  </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/24/Lucas-s-Theorem/#more" rel="contents">
@@ -899,7 +922,7 @@
 
       
         
-          <p>Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.<br>This post will mainly function as a memo in case I suddenly don’t understand some tricky part :P<br>
+          <p>Recently I took sometime to read the Concrete Mathematics in preparation for ACM-ICPC. But it turned out to be a quite interesting and useful book which is well edited.<br>This post will mainly function as a memo in case I suddenly don’t understand some tricky part :P  </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/23/Concrete-Mathematics-notes/#more" rel="contents">
@@ -1171,7 +1194,7 @@
 
       
         
-          <p><strong> Problem source :<br>Abandoned Animal:Benelux Algorithm Programming Contest 2017, Preliminaries </strong><br><a href="https://nanti.jisuanke.com/t/18617" target="_blank" rel="noopener">Problem</a><br>
+          <p>** Problem source :<br>Abandoned Animal:Benelux Algorithm Programming Contest 2017, Preliminaries **<br><a href="https://nanti.jisuanke.com/t/18617" target="_blank" rel="noopener">Problem</a>   </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/06/Abandoned-Animal/#more" rel="contents">
@@ -1307,7 +1330,7 @@
 
       
         
-          <p>总结一波上次学的Tongue blocking 🤔<br>也就是通过舌头堵孔来达到某些吹奏效果的技巧。论有一根灵巧的舌头的重要性  <font color="#ffcc00">(嗯？我怎么黄了？？？)<br></font><br>
+          <p>总结一波上次学的Tongue blocking 🤔<br>也就是通过舌头堵孔来达到某些吹奏效果的技巧。论有一根灵巧的舌头的重要性  <font color='#ffcc00'>(嗯？我怎么黄了？？？)<br></font></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/02/Tongue-blocking/#more" rel="contents">
@@ -1352,7 +1375,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
   </nav>
 
 
@@ -1397,7 +1420,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
@@ -1622,7 +1645,7 @@
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
